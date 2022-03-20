@@ -1,6 +1,7 @@
 import Card from "./Card";
 
 const CardList = ({robots}) => {
+    //throw new Error("Une erreur")-> pour voir le fonctionnement du composant ErrorBoundry
     return(
         <div>
             {robots.map((robot,i) => {

@@ -5,6 +5,7 @@ import SearchBox from '../components/SearchBox';
 //import { robots } from './data/robots';
 import './SEGA.woff';
 import Scroll from '../components/Scroll';
+import ErrorBoundry from '../components/ErrorBoundry';
 
 
 
@@ -37,7 +38,9 @@ class App extends Component {
         <h1 className="f1">ROBOFRIENDS</h1>
         <SearchBox searchChange={this.onSearchChange}/>
         <Scroll>
-          {cardList}
+          <ErrorBoundry>
+            {cardList}
+          </ErrorBoundry>
         </Scroll>
       </div>
     );
